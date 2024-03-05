@@ -19,7 +19,7 @@ i{
     color: #146C94;
 }
 h1{
-    font-size: 2.7rem;
+    font-size: 2rem;
 }
 h2{
     font-size: 2.2rem;
@@ -132,6 +132,9 @@ nav .forms i{
     margin-top: 5px;
     margin-left: 15px;
     margin-right: 25px;
+    border: 1px solid black;
+    border-radius: 50%;
+    padding:5px;
 }
 nav .desForm{
     margin-left: 70px;
@@ -142,7 +145,10 @@ nav .desForm{
 .desplegable:hover .desForm{
     display: block; 
 }
-
+.desForm a:hover{
+    color: black;
+    font-weight: bold;
+}
 main .header{
     display: flex;
     justify-content: space-between;
