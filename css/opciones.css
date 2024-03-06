@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+* {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+    font-size: 15px;
+}
+
+body {
+    background: gray;
+    display: flex;
+    width: 100%;
+}
+
+i {
+    font-size: 1.5rem;
+    color: #146C94;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 2.2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+p {
+    font-size: 1.3rem;
+}
+
+a {
+    font-size: 1rem;
+    text-decoration: none;
+    color: #146C94;
+}
+
+nav {
+    display: flex;
+    overflow: hidden;
+    width: 60px;
+    height: 100vh;
+    background-color: #AFD3E2;
+    position: sticky;
+    top: 0;
+    right: 0;
+    transition: all 1s ease;
+}
+
+nav:hover {
+    width: 450px;
+}
+
+nav:hover .main {
+    display: block;
+}
+
+nav:hover .main1 {
+    display: block;
+}
+
+nav .icon {
+    margin-top: 10px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+nav .icon i {
+    font-size: 2.2rem;
+    align-items: center;
+    margin-top: 5px;
+    margin-right: 25px;
+    margin-left: 10px;
+}
+
+nav .dashboard {
+    margin-top: 20px;
+    display: flex;
+}
+
+nav .dashboard i {
+    font-size: 1.5rem;
+    margin-top: 5px;
+    margin-left: 15px;
+    margin-right: 25px;
+}
+
+nav .main {
+    margin: 15px;
+    display: none;
+}
+
+nav .main1 {
+    margin: 15px;
+    display: none;
+}
+
+nav .elements {
+    display: flex;
+}
+
+nav .elements i {
+    font-size: 1.5rem;
+    margin-left: 15px;
+    margin-right: 25px;
+}
+
+nav .charts {
+    display: flex;
+}
+
+li {
+    margin-top: 20px;
+}
+
+nav .charts i {
+    font-size: 1.5rem;
+    margin-top: 5px;
+    margin-left: 15px;
+    margin-right: 25px;
+}
+
+nav .widgets {
+    display: flex;
+}
+
+nav .widgets i {
+    font-size: 1.5rem;
+    margin-top: 5px;
+    margin-left: 15px;
+    margin-right: 25px;
+}
+
+nav .tables {
+    display: flex;
+}
+
+nav .tables i {
+    font-size: 1.5rem;
+    margin-top: 5px;
+    margin-left: 15px;
+    margin-right: 25px;
+}
+
+nav .forms {
+    display: flex;
+}
+
+nav .forms i {
+    font-size: 1.5rem;
+    margin-top: 5px;
+    margin-left: 15px;
+    margin-right: 25px;
+    border: 1px solid black;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+nav .desForm {
+    margin-left: 70px;
+    margin-top: 5px;
+    margin-bottom: 0;
+    display: none;
+}
+
+.desplegable:hover .desForm {
+    display: block;
+}
+
+.desForm a:hover {
+    color: black;
+    font-weight: bold;
+}
+
+main .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 7vh;
+    width: 100%;
+    background-color: #AFD3E2;
+}
+
+main .header .izquierda {
+    background-color: #AFD3E2;
+}
+
+main {
+    background-color: #AFD3E2;
+    width: 100%;
+    height: 100vh;
+}
+
+nav.active {
+    width: 370px;
+}
+
+nav .main.active {
+    display: block;
+}
+
+nav .main1.active {
+    display: block;
+}
+
+main .informacion {
+    background-color: #F6F1F1;
+    height: 90vh;
+    width: 100%;
+    border-radius: 40px;
+    padding: 30px;
+}
+
+main .informacion .title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+main .informacion .title h2 {
+    font-size: 2.5rem;
+}
+
+main .informacion .principal {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    place-content: center;
+    place-items: center;
+    width: 100%;
+    height: auto;
+    gap: 25px;
+}
+
+#icon {
+    padding-top: 10px;
+    width: 200px;
+    height: 220px;
+    font-size: 160px;
+}
+
+#opciones:hover {
+    transform: scale(0.9);
+}
+
+#opciones {
+    border: 1px solid black;
+    transition-duration: 0.9s;
+    display: inline-block;
+    margin: 10px;
+    width: 250px;
+    height: 300px;
+    text-align: center;
+    border-radius: 25px;
+}
+
+button {
+    color: #146C94;
+    cursor: pointer;
+    width: 200px;
+    background: #146C94;
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 3px;
+    border-radius: 30px;
+}
+.formulario{
+    display: grid;
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid black;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    background-color: aliceblue;
+}
+input, select{
+    background: #F6F1F1;
+    width: 100%;
+    height: 40px;
+}
+.buscador{
+    display: flex;
+
+}
+button.buscar{
+    border-radius: 100px;
+    width: 40px;
+    height: 30px;
+    margin: 5px;
+    
+}
+#lupa{
+    font-size: 16px;
+    color: #F6F1F1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media (max-width:600px) {
+    main .informacion {
+        background-color: #F6F1F1;
+        height: 90vh;
+        width: 100%;
+        border-radius: 40px;
+        padding: 30px;
+        overflow-y: scroll;
+    }
+    nav {
+        display: flex;
+        overflow: hidden;
+        width: 60px;
+        height: 100vh;
+        background-color: #AFD3E2;
+        top: 0;
+        right: 0;
+        transition: all 1s ease;
+    }
+    nav.active {
+        width: 370px;
+        z-index: 5;
+        overflow: visible;
+    }
+    .desplegable:hover .desForm {
+        display: grid;
+    }
+}

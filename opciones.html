@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/opciones.css">
     <title>Dashboard</title>
 </head>
 
@@ -28,7 +28,7 @@
                     <i class='bx bxs-chart'></i>
                     <h3>Activos</h3>
                     <div class="desForm">
-                        <p><a href="opciones.html">Agregar</a></p>
+                        <p><a href="#">Agregar</a></p>
                         <p><a href="#">Editar</a></p>
                         <p><a href="#">Eliminar</a></p>
                         <p><a href="#">Buscar</a></p>
@@ -118,40 +118,23 @@
                 <i class='bx bx-menu-alt-right'></i>
             </div>
         </section>
+        <! --  Para la Edicion de Tipo activo -->
         <section class="informacion">
-            <div class="title">
-                <h2>Bienvenido!</h2>
-                <h4>Listo para la aventura de recorrer el inventario Campuslands</h4>
-            </div>
-            <br><br><br>
-            <div class="principal" id="principal">
-                <div id="opciones">
-                    <i class='bx bx-plus' id="icon"></i>
-                    <div>
-                        <h3>Crea o agrega items </h3>
-                        <br>
-                        <button><strong>AGREGAR</strong></button>
-                    </div>
-                </div>
-                <div id="opciones">
-                    <i class='bx bx-edit' id="icon"></i>
-                    <div>
-                        <h3>Editar </h3>
-                        <br>
-                        <button><strong>AGREGAR</strong></button>
-                    </div>
-                </div>
-                <div id="opciones">
-                    <i class='bx bxs-trash' id="icon"></i>
-                    <div>
-                        <h3>Eliminar </h3>
-                        <br>
-                        <button><strong>AGREGAR</strong></button>
+            <div class="agregar">
+                <div class="formulario">
+                   <div class="buscador">
+                    <input type="text" placeholder="Buscar">
+                    <button class="buscar"><i class='bx bxs-search' id="lupa" ></i></button>
+                    
+                   </div>
+                    <br>
+                    <div id="boton">
+                        <button><strong>Guardar</strong></button>
                     </div>
                 </div>
             </div>
-
         </section>
+   
     </main>
     <script src="js/main.js"></script>
 </body>
