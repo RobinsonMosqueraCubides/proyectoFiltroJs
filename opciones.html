@@ -49,7 +49,7 @@
             </li>
             <li class="desplegable">
                 <a href="#" class="forms">
-                    <i class='bx bx-user' ></i>
+                    <i class='bx bx-user'></i>
                     <h3>Persona</h3>
                     <div class="desForm">
                         <p><a href="#">Agregar</a></p>
@@ -118,23 +118,25 @@
                 <i class='bx bx-menu-alt-right'></i>
             </div>
         </section>
-        <! --  Para la Edicion de Tipo activo -->
-        <section class="informacion">
-            <div class="agregar">
-                <div class="formulario">
-                   <div class="buscador">
-                    <input type="text" placeholder="Buscar">
-                    <button class="buscar"><i class='bx bxs-search' id="lupa" ></i></button>
-                    
-                   </div>
-                    <br>
-                    <div id="boton">
-                        <button><strong>Guardar</strong></button>
+        <! -- Para  Buscar Proveedor-->
+            <section class="informacion">
+                <div class="agregar">
+                    <h4>Buscar Proveedor</h4>
+                    <div class="formulario">
+                        <div class="buscador">
+                            <input type="text" placeholder="Buscar" id="inputB">
+                            <button class="buscar"><i class='bx bxs-search' id="lupa"></i></button>
+                        </div>
+                        <div class="formBuscar">
+                            <input type="text"placeholder=" Id Activo">  <input type="text" placeholder=" Nombre ">  <input type="text" placeholder=" Estado" ><i class='bx bxs-show' id="ver" ></i>
+                            
+                        </div>
+                        <h6>*Pulsa el ojo para observar detalles del activo</h6>
+                        <br>
                     </div>
                 </div>
-            </div>
-        </section>
-   
+            </section>
+
     </main>
     <script src="js/main.js"></script>
 </body>
