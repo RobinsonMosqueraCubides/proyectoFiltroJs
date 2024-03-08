@@ -1,27 +1,14 @@
-let menu = document.querySelector("nav")
-
-document.querySelector(".izquierda").addEventListener("click", function(){
-    menu.classList.toggle("active")
-})
-
-document.querySelector("nav").addEventListener("click", function(){
-    menu.classList.remove("active")
-})
-let menu1 = document.querySelector(".main")
-
-document.querySelector(".izquierda").addEventListener("click", function(){
-    menu1.classList.toggle("active")
-})
-
-document.querySelector(".main").addEventListener("click", function(){
-    menu1.classList.remove("active")
-})
-let menu2 = document.querySelector(".main1")
-
-document.querySelector(".izquierda").addEventListener("click", function(){
-    menu2.classList.toggle("active")
-})
-
-document.querySelector(".main1").addEventListener("click", function(){
-    menu2.classList.remove("active")
-})
+import './eliminarActivo.js';
+let btnEliminarActivo = document.getElementById('activosEliminar');
+btnEliminarActivo.addEventListener('click',function(){
+    let main = document.getElementById('principal')
+    let titulo = document.querySelector('.title')
+    titulo.innerHTML='';
+    main.innerHTML='';
+    let creator = document.querySelector('.principal')
+    let base = `<eliminar-activo></eliminar-activo>`
+    let tdic = document.createElement('div');
+    tdic.classList.add('informacion')
+    tdic.innerHTML = base;
+    creator.appendChild(tdic);
+});

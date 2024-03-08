@@ -33,14 +33,11 @@ h3 {
     font-size: 1.5rem;
 }
 
-p {
-    font-size: 1.3rem;
-}
-
-a {
+a, p {
     font-size: 1rem;
     text-decoration: none;
     color: #146C94;
+    cursor: pointer;
 }
 
 nav {
@@ -176,7 +173,7 @@ nav .desForm {
     display: block;
 }
 
-.desForm a:hover {
+.desForm p:hover {
     color: black;
     font-weight: bold;
 }
