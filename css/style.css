@@ -215,6 +215,7 @@ main .informacion {
     width: 100%;
     border-radius: 40px;
     padding: 30px;
+    overflow-y: scroll;
 }
 
 main .informacion .title {

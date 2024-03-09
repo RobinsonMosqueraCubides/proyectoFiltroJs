@@ -36,7 +36,6 @@ export class elminarActivo extends HTMLElement{
         try {
             let response = await fetch('http://localhost:3000/activos')
             let data = await response.json(); 
-            console.log(data);
             data.forEach(data => {
               if (data.nroSerial.toLocaleLowerCase().includes(activoEliminar)) {
                 let divBuscador = this.querySelector('.eliminar')
@@ -56,7 +55,7 @@ export class elminarActivo extends HTMLElement{
         }
     }
     botonEliminar(){
-      let btnEliminar = this.querySelector('.listaBuscador');
+      let btnEliminar = this.querySelectorAll('.listaBuscador');
       btnEliminar.addEventListener('click',(e)=>{
         if (e.target.closest('.listaBuscador')) {
           let idElement = e.target.closest('.listaBuscador')

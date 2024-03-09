@@ -1,0 +1,225 @@
+{
+  "activos": [
+    {
+      "id": "01",
+      "CodTransaccion": "CT001",
+      "NroFormulario": "F12345",
+      "idMarca": "M001",
+      "idCategoria": "C001",
+      "idTipo": "T001",
+      "valorUnitario": 500,
+      "idProveedor": "P001",
+      "nroSerial": "SN123456",
+      "idEmpresaResponsable": "E001",
+      "idEstado": "ES001"
+    },
+    {
+      "id": 2,
+      "codTrans": "311",
+      "NroFormulario": "142354",
+      "nroSerial": "FRE234345",
+      "idMarca": "M003",
+      "idCategoria": "C001",
+      "idProveedor": "P001",
+      "valorUnitario": "500000",
+      "idEmpresa": "E003",
+      "idEstado": "ES002"
+    },
+    {
+      "id": "03",
+      "codTrans": "327",
+      "NroFormulario": "132412",
+      "nroSerial": "SN1345234234",
+      "idMarca": "M001",
+      "idCategoria": "C001",
+      "idProveedor": "P001",
+      "valorUnitario": "500000",
+      "idEmpresa": "E003",
+      "idEstado": "ES002"
+    }
+  ],
+  "proveedor": [
+    {
+      "id": "P001",
+      "nombre": "Proveedor Ejemplo",
+      "email": "proveedor@example.com"
+    }
+  ],
+  "marcas": [
+    {
+      "id": "M001",
+      "nombre": "LG"
+    },
+    {
+      "id": "M002",
+      "nombre": "Compumax"
+    },
+    {
+      "id": "M003",
+      "nombre": "Logitech"
+    },
+    {
+      "id": "M004",
+      "nombre": "BENQ"
+    },
+    {
+      "id": "M005",
+      "nombre": "ASUS"
+    },
+    {
+      "id": "M006",
+      "nombre": "Lenovo"
+    },
+    {
+      "id": "M007",
+      "nombre": "HP"
+    }
+  ],
+  "estado": [
+    {
+      "id": "ES001",
+      "nombre": "Asignado"
+    },
+    {
+      "id": "ES002",
+      "nombre": "No Asignado"
+    },
+    {
+      "id": "ES003",
+      "nombre": "Dado de baja"
+    },
+    {
+      "id": "ES002",
+      "nombre": "En reparacion"
+    }
+  ],
+  "asignacion": [
+    {
+      "id": "AS001",
+      "fecha": "2024-03-05",
+      "idResponsable": "RP001"
+    }
+  ],
+  "personas": [
+    {
+      "id": "RP001",
+      "nombre": "Responsable Ejemplo",
+      "email": "responsable@example.com",
+      "idTipoPersona": "TP001"
+    }
+  ],
+  "categorias": [
+    {
+      "id": "C001",
+      "nombre": "Equipo de computo"
+    },
+    {
+      "id": "C002",
+      "nombre": "Electrodomestico"
+    },
+    {
+      "id": "C003",
+      "nombre": "Juego"
+    }
+  ],
+  "tipoPersona": [
+    {
+      "id": "TP001",
+      "nombre": "Empleado"
+    }
+  ],
+  "tipoMovActivo": [
+    {
+      "id": "TM001",
+      "nombre": "Movimiento de Ejemplo"
+    }
+  ],
+  "historialActivo": [
+    {
+      "id": "H001",
+      "idActivo": "01",
+      "fecha": "2024-03-05",
+      "idResponsable": "RP001",
+      "idEstado": "ES001"
+    }
+  ],
+  "telefonoPersona": [
+    {
+      "id": "TPH001",
+      "nro": "+123456789",
+      "ubicacion": "Oficina",
+      "idPersona": "RP001"
+    }
+  ],
+  "tipos": [
+    {
+      "id": "TA001",
+      "nombre": "Monitor"
+    },
+    {
+      "id": "TA002",
+      "nombre": "CPU"
+    },
+    {
+      "id": "TA003",
+      "nombre": "Teclado"
+    },
+    {
+      "id": "TA004",
+      "nombre": "Mouse"
+    },
+    {
+      "id": "TA005",
+      "nombre": "Aire acondicionado"
+    },
+    {
+      "id": "TA006",
+      "nombre": "Portatil"
+    },
+    {
+      "id": "TA007",
+      "nombre": "Impresora"
+    }
+  ],
+  "detalleMovimiento": [
+    {
+      "id": "DM001",
+      "fecha": "2024-03-05",
+      "idActivo": "01",
+      "comentario": "Movimiento de ejemplo",
+      "idAsignacion": "AS001"
+    }
+  ],
+  "empresa": [
+    {
+      "id": "E001",
+      "nombre": "Campuslands"
+    },
+    {
+      "id": "E002",
+      "nombre": "Grupo bien pensado"
+    },
+    {
+      "id": "E003",
+      "nombre": "Contro de mercancias"
+    }
+  ],
+  "codTrans": [
+    {
+      "id": "324",
+      "nombre": "324"
+    },
+    {
+      "id": "311",
+      "nombre": "311"
+    },
+    {
+      "id": "111",
+      "nombre": "111"
+    },
+    {
+      "id": "327",
+      "nombre": "327"
+    }
+  ]
+}
