@@ -117,6 +117,7 @@ nav .charts {
 
 li {
     margin-top: 20px;
+    color:#146C94 ;
 }
 
 nav .charts i {
@@ -150,16 +151,21 @@ nav .tables i {
 
 nav .forms {
     display: flex;
+    flex-direction: column;
 }
-
+.conIcon{
+    display: flex;
+}
 nav .forms i {
     font-size: 1.5rem;
     margin-top: 5px;
     margin-left: 15px;
     margin-right: 25px;
     border: 1px solid black;
-    border-radius: 50%;
+    border-radius: 20%;
     padding: 5px;
+    width: 13%;
+    height: 13%;
 }
 
 nav .desForm {
@@ -170,7 +176,8 @@ nav .desForm {
 }
 
 .desplegable:hover .desForm {
-    display: block;
+    display: flex;
+    flex-direction: column;
 }
 
 .desForm p:hover {

@@ -6,23 +6,31 @@ function limpador() {
     titulo.innerHTML='';
     main.innerHTML='';
 }
-let btnEliminarActivo = document.getElementById('activosEliminar');
-btnEliminarActivo.addEventListener('click',function(){
+function reconocer(x) {
+    let Elements = document.querySelectorAll(x);
+    Elements.forEach(function(event){
+        event.addEventListener('click', function(){
+            let className = event.className;
+            let idName =event.id
+            console.log(idName, className);
+            
+        });
+    }); 
+}
+reconocer(".activos");
+reconocer(".marcas");
+reconocer(".personas");
+reconocer(".estado");
+reconocer(".tipoPersona");
+reconocer(".tipoMovActivo");
+reconocer(".tipos");
+reconocer(".asignacion");
+function callDelete(name) {
     limpador();
-    let creator = document.querySelector('.principal')
-    let base = `<eliminar-activo></eliminar-activo>`
+    let creator = document.querySelector('.title')
+    let base = `<eliminar-activo name = ${name}></eliminar-activo>`
     let tdic = document.createElement('div');
     tdic.classList.add('informacion')
     tdic.innerHTML = base;
     creator.appendChild(tdic);
-});
-let btnAgregarActivos = document.getElementById('agregarActivos');
-btnAgregarActivos.addEventListener('click',function(){
-    limpador();
-    let creator = document.querySelector('.principal')
-    let base = `<crear-activo></crear-activo>`
-    let tdic = document.createElement('div');
-    tdic.classList.add('informacion')
-    tdic.innerHTML = base;
-    creator.appendChild(tdic);
-});
+}
