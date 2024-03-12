@@ -5,7 +5,10 @@ export class agregar extends HTMLElement{
         this.render();
     }
     render(){
-        this.innerHTML=`<section class="informacion">
+        this.innerHTML=`<style>
+        @import url('../css/agregar.css');
+      </style>
+      <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"><section class="informacion">
         <div class="agregar">
             <div class="formulario">
                 <p>Nombre</p>
