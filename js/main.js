@@ -2,6 +2,7 @@ import './eliminarActivo.js';
 import './crearNuevoActivo.js';
 import './buscar.js';
 import './agregar.js'
+import './editar.js';
 function limpador() {
     let main = document.getElementById('principal')
     let titulo = document.querySelector('.title')
@@ -23,8 +24,13 @@ function reconocer(x) {
                     break;
                 case 'buscar':
                     callDuck(className, 'buscar');
+                    break;
                 case 'agregar':
-                    callDuck(className, 'agregar')
+                    callDuck(className, 'agregar');
+                    break;
+                case 'editar':
+                    callDuck(className, 'editar');
+                    break;
                 default:
                     break;
             }
