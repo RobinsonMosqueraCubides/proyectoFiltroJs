@@ -4,7 +4,7 @@ export class editar extends HTMLElement{
         this.name;
         this.render();
     }
-    render(){
+    render(){ // estructura inicial
         this.innerHTML=`
         <style>
           @import url('../css/styleEliminar.css');
@@ -24,11 +24,11 @@ export class editar extends HTMLElement{
                     </div>
                 </div>`;
     }
-    static get observedAttributes(){
+    static get observedAttributes(){ //revisa que exita el parametro name en el web component
         return ['name'];
     }
   
-    attributeChangedCallback(nameAttr, oldValue, newValue){
+    attributeChangedCallback(nameAttr, oldValue, newValue){ //tomar el nombre y lo guarda
         switch(nameAttr){
             case "name":
                 this.name = newValue;
@@ -36,7 +36,7 @@ export class editar extends HTMLElement{
         }
     }
   
-    async connectedCallback(){
+    async connectedCallback(){ //imprime lo que hay en el json server
       try {
         let response = await fetch(`http://localhost:3000/${this.name}`)
         let data = await response.json();
@@ -54,7 +54,7 @@ export class editar extends HTMLElement{
         
       }
     }
-    botonBuscar(){
+    botonBuscar(){ //leer el input y envia el dato
         let input = this.querySelector('#inputB');
         this.querySelector('#buscar').addEventListener('click',() => {
             let divBuscar = this.querySelector('.eliminar')
@@ -63,7 +63,7 @@ export class editar extends HTMLElement{
             this.buscarCoincidencia(data);
         });
     }
-    async buscarCoincidencia(activoBuscar){
+    async buscarCoincidencia(activoBuscar){ //resive el dato y limpia escribe lo que encontro
         try {
             let response = await fetch(`http://localhost:3000/${this.name}`)
             let data = await response.json(); 

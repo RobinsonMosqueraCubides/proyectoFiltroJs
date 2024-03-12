@@ -73,6 +73,10 @@
     {
       "id": "M007",
       "nombre": "HP"
+    },
+    {
+      "id": "marcas08",
+      "nombre": {}
     }
   ],
   "estado": [

@@ -5,7 +5,7 @@ export class elminarActivo extends HTMLElement{
         this.render();
         this.obtenerInformacion();
     }
-    render(){
+    render(){ //estructura inicial
         this.innerHTML=`
         <style>
           @import url('../css/styleEliminar.css');
@@ -25,14 +25,14 @@ export class elminarActivo extends HTMLElement{
                     </div>
                 </div>`;
     }
-    static get observedAttributes(){
+    static get observedAttributes(){ //lee que exista el parametro name
       return ['name'];
   }
 
   attributeChangedCallback(nameAttr, oldValue, newValue){
       switch(nameAttr){
           case "name":
-              this.name = newValue;
+              this.name = newValue; //le da el valor a this.name
           break;
       }
   }
@@ -45,14 +45,14 @@ export class elminarActivo extends HTMLElement{
       
     }
   }
-  obtenerInformacion(){
+  obtenerInformacion(){ //obtiene lo que hay en el input 
     let input = this.querySelector('#inputB');
     this.querySelector('#buscar').addEventListener('click',() => {
         let data = input.value.toLocaleLowerCase();
         this.buscarCoincidencia(data);
     })
 }
-async buscarCoincidencia(activoEliminar){
+async buscarCoincidencia(activoEliminar){//busca que exista y crea el elemento
     try {
         let response = await fetch(`http://localhost:3000/${this.name}`)
         let data = await response.json(); 
@@ -75,7 +75,7 @@ async buscarCoincidencia(activoEliminar){
         
     }
 }
-botonEliminar() {
+botonEliminar() { //confirma que desea eleminar el objeto
   let btnEliminar = document.querySelectorAll('.listaBuscador');
   btnEliminar.forEach(elem => {
     elem.addEventListener('click', () => {
@@ -88,7 +88,7 @@ botonEliminar() {
   });
 }
 
-async eliminar(idActivo) {
+async eliminar(idActivo) { //metodo borrar json server
   try {
       let response = await fetch(`http://localhost:3000/${this.name}/${idActivo}`,{
           method: 'DELETE',

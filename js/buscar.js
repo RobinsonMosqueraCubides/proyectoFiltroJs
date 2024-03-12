@@ -4,7 +4,7 @@ export class buscar extends HTMLElement{
         this.name;
         this.render();
     }
-    render(){
+    render(){ //estructura inicial del webcomponent
         this.innerHTML=`
         <style>
           @import url('../css/styleEliminar.css');
@@ -25,18 +25,18 @@ export class buscar extends HTMLElement{
                 </div>`;
     }
     static get observedAttributes(){
-        return ['name'];
+        return ['name'];//observa que haya el parametro name en el web componen
     }
   
     attributeChangedCallback(nameAttr, oldValue, newValue){
         switch(nameAttr){
             case "name":
-                this.name = newValue;
+                this.name = newValue;//obtiene el nombre del parametro
             break;
         }
     }
   
-    async connectedCallback(){
+    async connectedCallback(){//obtiene los datos del json server y escribre la lista de los objetos
       try {
         let response = await fetch(`http://localhost:3000/${this.name}`)
         let data = await response.json();
@@ -54,7 +54,7 @@ export class buscar extends HTMLElement{
         
       }
     }
-    botonBuscar(){
+    botonBuscar(){ //con el evento click toma lo que hay en el input
         let input = this.querySelector('#inputB');
         this.querySelector('#buscar').addEventListener('click',() => {
             let divBuscar = this.querySelector('.eliminar')
@@ -63,7 +63,7 @@ export class buscar extends HTMLElement{
             this.buscarCoincidencia(data);
         });
     }
-    async buscarCoincidencia(activoBuscar){
+    async buscarCoincidencia(activoBuscar){//busca coincidencias denetro del json server e imprime lo que encontro
         try {
             let response = await fetch(`http://localhost:3000/${this.name}`)
             let data = await response.json(); 

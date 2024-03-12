@@ -4,7 +4,7 @@ export class agregar extends HTMLElement{
         this.name;
         this.render();
     }
-    render(){
+    render(){//se crea la estructura inicial del web component
         this.innerHTML=`<style>
         @import url('../css/agregar.css');
       </style>
@@ -23,13 +23,13 @@ export class agregar extends HTMLElement{
     </section> `
     }
     static get observedAttributes(){
-        return ['name'];
+        return ['name'];//observa que haya el parametro name en el web componen
     }
   
     attributeChangedCallback(nameAttr, oldValue, newValue){
         switch(nameAttr){
             case "name":
-                this.name = newValue;
+                this.name = newValue;//obtiene el nombre del parametro
             break;
         }
     }
@@ -38,12 +38,12 @@ export class agregar extends HTMLElement{
       try {
         let response = await fetch(`http://localhost:3000/${this.name}`)
         let data = await response.json();
-        this.btnGuardar(data,this.name);
+        this.btnGuardar(data,this.name);//lee el json server y toma el nombre de la keypoint
       } catch{
         
       }
     }
-    btnGuardar(data,keyPoint){
+    btnGuardar(data,keyPoint){//recibe el objeto para saber cuantos hay y crea el nuevo objeto para agregarlo
         this.querySelector('#boton').addEventListener('click', ()=>{
             let dic ={
                 id: `${keyPoint}0${data.length+1}`,
@@ -52,7 +52,7 @@ export class agregar extends HTMLElement{
             this.guardar(dic, keyPoint);
         });
     }
-    async guardar(activo, llave){
+    async guardar(activo, llave){//metodo para guardar al json server
         try {
             let response = await fetch(`http://localhost:3000/${llave}`,{
             method: 'POST',

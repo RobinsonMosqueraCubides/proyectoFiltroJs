@@ -5,7 +5,7 @@ export class nuevoActivo extends HTMLElement{
         this.nombreSelect();
         this.obtenerInformacion();
     }
-    render(){
+    render(){ //estructura inicial del web componen
         this.innerHTML = `<style>
         @import url('../css/nuevoActivo.css');
       </style>
@@ -49,10 +49,10 @@ export class nuevoActivo extends HTMLElement{
     nombreSelect(){
         let arrayNombres = ['categorias','marcas','estado','empresa','proveedor','codTrans'];
         for (let i = 0; i < arrayNombres.length; i++) {
-            this.crearSelect(arrayNombres[i]);
+            this.crearSelect(arrayNombres[i]); //envia los nombre de las keypoint
         }
     };
-    async crearSelect(nombre){
+    async crearSelect(nombre){//imprime los selec dependiendo de las key point
         let response = await fetch(`http://localhost:3000/${nombre}`)
         let data = await response.json();
         let selectElement= document.createElement('select');
@@ -66,7 +66,7 @@ export class nuevoActivo extends HTMLElement{
             tdiv.appendChild(selectElement);
         });
     };
-    async obtenerInformacion(){
+    async obtenerInformacion(){ //obtiene cuantos datos hay en el json server y el objeto a guardar
         let response = await fetch('http://localhost:3000/activos')
         let data = await response.json(); 
         this.querySelector('#boton').addEventListener('click', () =>{ 
@@ -85,7 +85,7 @@ export class nuevoActivo extends HTMLElement{
             this.guardar(activo);
         });
     };
-    async guardar(activo){
+    async guardar(activo){ //guarda el objeto en el json server
         try {
             let response = await fetch('http://localhost:3000/activos',{
             method: 'POST',
