@@ -30,3 +30,50 @@ input, select{
 .agregar,h6{
     margin-top: 15px;
 }
+
+@media (max-width: 600px) {
+    main .informacion {
+        background-color: #F6F1F1;
+        height: 90vh;
+        width: 100%;
+        border-radius: 40px;
+        padding: 30px;
+        overflow-y: scroll;
+    }
+    nav {
+        display: flex;
+        overflow: hidden;
+        width: 60px;
+        height: 100vh;
+        background-color: #AFD3E2;
+        top: 0;
+        right: 0;
+        transition: all 1s ease;
+    }
+    nav.active {
+        width: 370px;
+        z-index: 5;
+        overflow: visible;
+    }
+    .desplegable:hover .desForm {
+        display: grid;
+    }
+    .formulario {
+        margin: 10px;
+        padding: 5px;
+    }
+    button {
+        width: 150px;
+    }
+}
+
+@media (max-width: 400px) {
+    .formulario {
+        margin: 5px;
+        padding: 3px;
+    }
+
+    button {
+        width: 100px;
+    }
+}

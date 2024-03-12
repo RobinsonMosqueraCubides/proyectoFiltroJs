@@ -70,7 +70,10 @@ nav .icon {
     text-align: center;
     justify-content: center;
 }
-
+.logo{
+    width: 50px;
+    margin: 5px;
+}
 nav .icon i {
     font-size: 2.2rem;
     align-items: center;
@@ -306,4 +309,5 @@ button {
     .desplegable:hover .desForm {
         display: grid;
     }
+
 }
